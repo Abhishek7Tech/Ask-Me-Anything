@@ -1,0 +1,24 @@
+.paragraph{
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-top: 1rem;
+    scroll-behavior: smooth;
+    overflow-y:scroll;
+    scrollbar-width:none;
+    margin-bottom: 2rem;
+    height: 30rem;
+    p{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 2rem ;
+        scroll-behavior: smooth;
+    }
+    h1{
+        text-align: center;
+        padding-top: 15%;
+        
+    }
+}

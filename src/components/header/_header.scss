@@ -1,0 +1,32 @@
+.heading {
+  color: whitesmoke;
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 1rem;
+  text-align: center;
+  animation-duration: 6s;
+  animation-name: changeColor;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  text-decoration: underline;
+  cursor: none;
+
+  @keyframes changeColor {
+    20% {
+      color: violet;
+    }
+    40% {
+      color: greenyellow;
+    }
+    60% {
+      color: aqua;
+    }
+
+    80% {
+      color: lightgreen;
+    }
+    100% {
+      color: lightblue;
+    }
+  }
+}
