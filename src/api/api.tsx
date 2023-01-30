@@ -1,5 +1,5 @@
 
-const getAnswer = async (question) => {
+const getAnswer = async (question:string) => {
   console.log("API", process.env.REACT_APP_OPEN_API_KEY);
 
   const requestOptions = {

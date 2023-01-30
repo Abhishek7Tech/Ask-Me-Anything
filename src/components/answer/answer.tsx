@@ -1,8 +1,10 @@
 import React from "react";
 import "../../css/app.css";
 
-const Answer = (props) => {
-  const answer = props.ans;
+type ACTIONTYPES = {ans:string | null}
+
+const Answer = (props:ACTIONTYPES) => {
+  const answer:string | null = props.ans;
   // const answer = "MESSI";
 
   return (

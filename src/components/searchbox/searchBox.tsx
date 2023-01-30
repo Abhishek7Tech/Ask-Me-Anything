@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "../../css/app.css";
 import getAnswer from "../../api/api";
 
-const SearchBox = (props) => {
-  const [input, setInput] = useState("");
-  const [token, setToken] = useState(0);
+type ACTIONTYPE = {text:(string:string) => void};
 
-  const InputHandler = async (event) => {
+const SearchBox = (props:ACTIONTYPE) => {
+  const [input, setInput] = useState<string>("");
+  const [token, setToken] = useState<number>(0);
+
+  const InputHandler = async (event:React.FormEvent) => {
     event.preventDefault();
     console.log("props");
     if (input.length > 1) {
@@ -17,12 +19,12 @@ const SearchBox = (props) => {
     } else {
       alert("Is this even a question? 😂🤣😂");
     }
-    event.target.reset();
+    (event.target as any).reset();
   };
 
-  const questionHandler = (event) => {
+  const questionHandler = (event:React.FormEvent) => {
     event.preventDefault();
-    setInput(event.target.value);
+    setInput((event.target as HTMLInputElement).value);
   };
 
   return (
