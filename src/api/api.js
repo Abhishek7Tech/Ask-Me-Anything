@@ -11,7 +11,7 @@ const getAnswer = async (question) => {
     body: JSON.stringify({
       model: "text-davinci-003",
       prompt:`Answer this, ${question} ?, like a pro in shortest form possible`,
-      max_tokens: 20,
+      max_tokens: 50,
       temperature: 0.8,
     }),
   };
@@ -22,8 +22,8 @@ const getAnswer = async (question) => {
       requestOptions
     );
     const answer = await response.json();
-    console.log(answer.choices[0].text);
-    return answer.choices[0].text;
+    console.log("Answeer",);
+    return answer;
   } catch (err) {
     console.log(err);
   }
