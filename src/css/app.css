@@ -60,6 +60,11 @@ body, html {
   .search h3 {
     color: white; }
 
+@media screen and (max-width: 612px) {
+  input {
+    width: 80%;
+    font-size: 1rem; } }
+
 .paragraph {
   color: white;
   margin-left: 10%;
