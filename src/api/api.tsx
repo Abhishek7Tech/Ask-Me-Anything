@@ -10,7 +10,7 @@ const getAnswer = async (question:string) => {
     },
     body: JSON.stringify({
       model: "text-davinci-003",
-      prompt:`Answer this, ${question} ?, like a pro in shortest form possible`,
+      prompt:`Answer this, ${question} ?, like a pro in shortest form possible. Two sentences maximum.`,
       max_tokens: 50,
       temperature: 0.8,
     }),
