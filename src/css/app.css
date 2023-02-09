@@ -45,7 +45,7 @@ body, html {
     margin-bottom: 1rem; }
   .search button {
     cursor: pointer;
-    width: 5rem;
+    width: 5.5rem;
     height: 2rem;
     font-size: 1rem;
     font-weight: 700;
@@ -81,7 +81,11 @@ body, html {
     margin-left: 1rem;
     margin-right: 1rem;
     line-height: 2rem;
-    scroll-behavior: smooth; }
+    font-weight: 600;
+    font-size: larger;
+    scroll-behavior: smooth;
+    text-align: center;
+    padding-top: 10%; }
   .paragraph h1 {
     text-align: center;
     padding-top: 15%; }
