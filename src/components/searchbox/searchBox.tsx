@@ -11,7 +11,6 @@ const SearchBox = (props: ACTIONTYPE) => {
 
   const InputHandler = async (event: React.FormEvent) => {
     event.preventDefault();
-    console.log("props");
     if (input.length > 1) {
       setClick("Loading...");
       const ans = await getAnswer(input);

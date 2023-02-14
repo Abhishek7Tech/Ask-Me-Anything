@@ -1,6 +1,5 @@
 
 const getAnswer = async (question:string) => {
-  console.log("API", process.env.REACT_APP_OPEN_API_KEY);
 
   const requestOptions = {
     method: "POST",
@@ -22,7 +21,6 @@ const getAnswer = async (question:string) => {
       requestOptions
     );
     const answer = await response.json();
-    console.log("Answeer",);
     return answer;
   } catch (err) {
     console.log(err);
