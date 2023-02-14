@@ -14,6 +14,10 @@ const SearchBox = (props: ACTIONTYPE) => {
     if (input.length > 1) {
       setClick("Loading...");
       const ans = await getAnswer(input);
+      if(!ans){
+        setClick("Ask!");
+        alert("Something Went Wrong! 😢😢 Please Try Again and refresh the brwoser✌");
+      }
       props.text(ans.choices[0].text);
       const tokens = ans.usage.completion_tokens;
       setToken(+tokens + token);
