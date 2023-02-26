@@ -15,15 +15,16 @@ const SearchBox = (props: ACTIONTYPE) => {
       setClick("Loading...");
       const ans = await getAnswer(input);
       if(!ans){
-        setClick("Ask!");
         alert("Something Went Wrong! 😢😢 Please Try Again and refresh the brwoser✌");
+        setClick("Ask!");
       }
       props.text(ans.choices[0].text);
       const tokens = ans.usage.completion_tokens;
       setToken(+tokens + token);
       setClick("Ask!")
+      setInput("");
     } else {
-      alert("Is this even a question? 😂🤣😂");
+      alert("Is this even a question? 😂🤣😂😒");
     }
     (event.target as any).reset();
   };
