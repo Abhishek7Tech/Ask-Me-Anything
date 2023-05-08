@@ -18,6 +18,11 @@ const SearchBox = (props: ACTIONTYPE) => {
         alert("Something Went Wrong! 😢😢 Please Try Again and refresh the brwoser✌");
         setClick("Ask!");
       }
+
+      if(ans.error){
+        alert(`${ans.error.message}`);
+        setClick("Ask!");
+      }
       props.text(ans.choices[0].text);
       const tokens = ans.usage.completion_tokens;
       setToken(+tokens + token);
