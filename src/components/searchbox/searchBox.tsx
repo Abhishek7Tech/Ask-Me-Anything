@@ -23,6 +23,7 @@ const SearchBox = (props: ACTIONTYPE) => {
         alert(`${ans.error.message}`);
         setClick("Ask!");
       }
+  
       props.text(ans.choices[0].text);
       const tokens = ans.usage.completion_tokens;
       setToken(+tokens + token);
